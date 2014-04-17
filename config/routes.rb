@@ -3,6 +3,7 @@ CodeBuddy::Application.routes.draw do
   devise_for :users
   get 'users/:id' => 'users#show', as: :user
   root "pages#home"
+  get 'users' => 'users#index'
   get "about" => "pages#about"
   get "contact" => "pages#contact"
   # The priority is based upon order of creation: first created -> highest priority.
