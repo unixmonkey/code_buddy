@@ -1,4 +1,7 @@
 CodeBuddy::Application.routes.draw do
+
+  devise_for :users
+  get 'users/:id' => 'users#show', as: :user
   root "pages#home"
   get "about" => "pages#about"
   get "contact" => "pages#contact"
